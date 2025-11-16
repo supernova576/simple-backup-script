@@ -28,3 +28,10 @@ chmod +x backup-script.sh
 # or
 bash backup-script.sh
 ```
+
+**Cronjob**
+You can also use this script to backup data automatically using crontab. Dont forget to include the `/dev/null 2>&1`-Line at the end
+```bash
+# Backup important data
+58 * * * * sudo /bin/bash /path/to/script/backup-script.sh > /dev/null 2>&1
+```
